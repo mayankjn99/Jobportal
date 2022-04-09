@@ -91,7 +91,8 @@ export default class AddJob extends Component {
         }
  
         
-        if(localStorage.getItem('Login')==="true" && localStorage.getItem('Type')==="Recruiter"){
+        if (localStorage.getItem('Login') &&
+            localStorage.getItem('Type') === "Recruiter") {
               console.log(newJob);
               localStorage.setItem('Jobs',newJob);
               axios.post('http://localhost:4000/api/job/add',newJob).then(

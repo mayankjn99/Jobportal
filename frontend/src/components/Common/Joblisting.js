@@ -18,7 +18,7 @@ export default class Joblistings extends Component {
      componentDidMount() {
         console.log("Hi")
         // alert("Hi")
-        if(localStorage.getItem('Type') === "Recruiter" && localStorage.getItem('Login') === "true" ){
+        if(localStorage.getItem('Type') === "Recruiter" && localStorage.getItem('Login') ){
            
             const newUser = {
                 email: localStorage.getItem('email')

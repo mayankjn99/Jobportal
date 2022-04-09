@@ -22,7 +22,7 @@ export default class Viewjob extends Component {
     }
 
     componentDidMount() {
-        if(localStorage.getItem('Type') === "Recruiter" && localStorage.getItem('Login') === "true" ){
+        if(localStorage.getItem('Type') === "Recruiter" && localStorage.getItem('Login') ){
             const newUser = {
                 // name: this.state.name,
                 email: localStorage.getItem('email') ,
@@ -73,15 +73,15 @@ export default class Viewjob extends Component {
         this.setState({apps: this.state.apps});
     }
     Dsortbyname = () =>{
-        let  n = this.state.apps.length;
+        const  n = this.state.apps.length;
       
-        for(var i=0; i < n-1; i++)
+        for(let i=0; i < n-1; i++)
         {
-            for(var j=0; j < n-1; j++)
+            for(let j=0; j < n-1; j++)
             {
                 if( this.state.apps[j].name_applicant <  this.state.apps[j+1].name_applicant)
                 {
-                    var temp=  this.state.apps[j];
+                    const temp=  this.state.apps[j];
                     this.state.apps[j] =  this.state.apps[j+1];
                     this.state.apps[j+1] = temp;
                 }
@@ -90,15 +90,15 @@ export default class Viewjob extends Component {
         this.setState({apps: this.state.apps});
     }
     AsortbyDate = () =>{
-        let  n = this.state.apps.length;
+        const n = this.state.apps.length;
         console.log("HI")
-        for(var i=0; i < n-1; i++)
-        {
-            for(var j=0; j < n-1-i; j++)
-            {
+        for(let i=0; i < n-1; i++) {
+        
+            for(let j=0; j < n-1-i; j++) {
+
                 if(this.state.apps[j].date_of_application > this.state.apps[j+1].date_of_application)
                 {
-                    var temp=  this.state.apps[j];
+                    const temp=  this.state.apps[j];
                     this.state.apps[j] =  this.state.apps[j+1];
                     this.state.apps[j+1] = temp;
                 }
@@ -111,9 +111,9 @@ export default class Viewjob extends Component {
     DsortbyDate = () =>{
         let  n = this.state.apps.length;
       
-        for(var i=0; i < n-1; i++)
+        for(let i=0; i < n-1; i++)
         {
-            for(var j=0; j < n-1; j++)
+            for(let j=0; j < n-1; j++)
             {
                 if( this.state.apps[j].date_of_application <  this.state.apps[j+1].date_of_application)
                 {

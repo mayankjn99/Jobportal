@@ -31,7 +31,7 @@ export default class Editjob extends Component{
         this.setState({ deadline: event.target.value });
     }
     componentDidMount(){
-        if(localStorage.getItem('Type') === "Recruiter" && localStorage.getItem('Login') === "true" ){
+        if(localStorage.getItem('Type') === "Recruiter" && localStorage.getItem('Login') ){
            
         console.log("Hi")
         console.log(this.state.id)

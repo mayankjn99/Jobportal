@@ -41,7 +41,7 @@ export default class Joblistings extends Component {
      componentDidMount() {
         console.log("Hi in job view")
         // alert("Hi")
-        if(localStorage.getItem('Type') === "Applicant" && localStorage.getItem('Login') === "true" ){
+        if(localStorage.getItem('Type') === "Applicant" && localStorage.getItem('Login') ){
            
            let newUser;
              axios.post('http://localhost:4000/api/viewjobs', newUser)

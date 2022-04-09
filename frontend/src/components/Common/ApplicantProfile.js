@@ -19,7 +19,7 @@ export default class ApplicantProfile extends Component {
     }
     componentDidMount()
     {
-        if(localStorage.getItem('Type') === "Applicant" && localStorage.getItem('Login') === "true" ){
+        if(localStorage.getItem('Type') === "Applicant" && localStorage.getItem('Login')  ){
         this.state.email= localStorage.getItem('email');
         this.state.name = localStorage.getItem('name');
     

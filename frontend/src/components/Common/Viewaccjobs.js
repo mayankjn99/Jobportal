@@ -21,7 +21,7 @@ export default class jobs extends Component {
     }
 
     componentDidMount() {
-        if(localStorage.getItem('Type') === "Recruiter" && localStorage.getItem('Login') === "true" ){
+        if(localStorage.getItem('Type') === "Recruiter" && localStorage.getItem('Login')  ){
            
             const newUser = {
                 email: localStorage.getItem('email')

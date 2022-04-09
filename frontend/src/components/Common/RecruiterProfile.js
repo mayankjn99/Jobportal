@@ -72,7 +72,7 @@ export default class RecProfile extends Component {
     }
     componentDidMount()
     {
-        if(localStorage.getItem('Type') === "Recruiter" && localStorage.getItem('Login') === "true" ){
+        if(localStorage.getItem('Type') === "Recruiter" && localStorage.getItem('Login')  ){
            
         this.state.email= localStorage.getItem('email');
         this.state.name = localStorage.getItem('name');

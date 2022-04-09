@@ -50,17 +50,18 @@ export default class Login extends Component {
         (res => {
         //    console.log(res.data)  
         //    console.log(this.state.Password)
-            if(res.data.Password===newUser.Password){
+            if (res.data.Password === newUser.Password) {
                 alert("Login Successful ");
                 // let login='false';
                 alert(res.data.name);
-                localStorage.setItem('Login',"true");
+                
+                localStorage.setItem('Login',true);
                 localStorage.setItem('name', res.data.name);
                 localStorage.setItem('email', res.data.email);
                 localStorage.setItem('Password', res.data.Password);
                 localStorage.setItem('Type', res.data.Type);
                
-                // console.log(res.body._id)
+                
                 this.props.history.push("/");
             window.location.reload();
             }

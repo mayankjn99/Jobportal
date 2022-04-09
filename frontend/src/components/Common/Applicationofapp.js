@@ -12,7 +12,7 @@ export default class Application extends Component {
     }
 
     componentDidMount() {
-        if(localStorage.getItem('Type') === "Applicant" && localStorage.getItem('Login') === 'true'){
+        if(localStorage.getItem('Type') === "Applicant" && localStorage.getItem('Login') ){
             const User  = {
                 email: localStorage.getItem('email')
             }
